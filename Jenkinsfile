@@ -11,7 +11,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Testing the website...'
+                bat 'if exist index.html (echo Test Passed) else (exit 1)'
             }
         }
 
